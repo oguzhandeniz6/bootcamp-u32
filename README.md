@@ -27,7 +27,7 @@ Takım Unity U-32
 Lone Arm Odyssey, Tek kolu olan bir savaşçı, elinde sadece bir eşya taşıyarak (Kılıç, fener, sandalye vs..)  zorlu odaların ve düşmanların üstesinden gelmeye çalışır. Kaçış süreci boyunca farklı düşman türleri görür, elindeki eşyaları geliştirebilir veya kırılmalarını önleyebilir. Çantası olmadığı için odaları ve odadaki eşyaları yöneterek, farklı stratejilerle düşmanlarını alt etmek zorunda kalır. Gizliliği kullanarak isteğe bağlı olarak bazı durumların altından kalkar. Bölümleri geçerek şatodan kaçmaya çalışır.
 
 
-- **Gameplay Features**: 
+**Gameplay Features**: 
 - Düşmanlarla çevreyi kullanarak savaşma.
 - Silahlarını organize etme
 - Odalarla farklı özellikleri olan eşyaları toplama ve saklama
