@@ -28,15 +28,15 @@ Lone Arm Odyssey, Tek kolu olan bir savaşçı, elinde sadece bir eşya taşıya
 
 
 - **Gameplay Features**: 
--Düşmanlarla çevreyi kullanarak savaşma.
--Silahlarını organize etme
--Odalarla farklı özellikleri olan eşyaları toplama ve saklama
--Kaynak yönetimi (Oyuncu sadece bir eşya taşıyabilir)
--Gerektiği yerde savaşmaktan ziyade ışığı kullanarak stratejiler geliştirme.
--Eşya dayanıklılıkları
--Gizlenme
--Oda ışıklandırma
--Puzzle
+- Düşmanlarla çevreyi kullanarak savaşma.
+- Silahlarını organize etme
+- Odalarla farklı özellikleri olan eşyaları toplama ve saklama
+- Kaynak yönetimi (Oyuncu sadece bir eşya taşıyabilir)
+- Gerektiği yerde savaşmaktan ziyade ışığı kullanarak stratejiler geliştirme.
+- Eşya dayanıklılıkları
+- Gizlenme
+- Oda ışıklandırma
+- Puzzle
 
 
 
