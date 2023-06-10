@@ -3,7 +3,7 @@ Bootcamp U32 Lone Arm: Odyssey
 
 # **Takım İsmi**
 
-Takım Flutter 52
+Takım Unity U-32
 
 # Ürün İle İlgili Bilgiler
 
