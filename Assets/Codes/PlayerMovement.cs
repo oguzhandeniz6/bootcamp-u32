@@ -64,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+
+
         float targetSpeed;
         if (isSprinting)
         {
