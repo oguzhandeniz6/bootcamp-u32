@@ -10,7 +10,14 @@ public class PlayerController : MonoBehaviour
     [Tooltip("Fýrlatma ve yere býrakmayý ayýran delay süresi")]
     [SerializeField] private float delayForThrowing = 0.3f;
     private float holdStartTime = 0;
+    private Animator playerAnim;
 
+    private void Start()
+    {
+        playerAnim = GetComponent<Animator>();
+    }
+
+  
 
     private void Update()
     {
@@ -128,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
     private void PickUp(GameObject pickedObject)
     {
-        gameObject.GetComponent<Animator>().Play("PickUp");
+        gameObject.GetComponent<Animator>().SetTrigger("onPickingUp");
         pickedObject.transform.SetParent(rightHand);
         pickedObject.transform.localPosition = Vector3.zero;
         pickedObject.GetComponent<Rigidbody>().isKinematic = true;
