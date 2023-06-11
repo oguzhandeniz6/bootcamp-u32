@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
 
     private void PickUp(GameObject pickedObject)
     {
+        gameObject.GetComponent<Animator>().Play("PickUp");
         pickedObject.transform.SetParent(rightHand);
         pickedObject.transform.localPosition = Vector3.zero;
         pickedObject.GetComponent<Rigidbody>().isKinematic = true;
@@ -148,6 +149,7 @@ public class PlayerController : MonoBehaviour
     //Þimdilik drop ile ayný
     private void Throw()
     {
+        gameObject.GetComponent<Animator>().Play("Throw");
         var child = rightHand.GetChild(0);
 
         child.transform.SetParent(null);

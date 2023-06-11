@@ -17,6 +17,7 @@ public class Consumable : Grabbable
             return;
         }
 
+
         Debug.Log("restored " + amount + " health.");
         Debug.Log(base.currentDurability + "/" + base.maxDurability);
     }
