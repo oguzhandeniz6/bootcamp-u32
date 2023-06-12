@@ -17,73 +17,74 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
     }
 
-  
+    float useDelay;
 
     private void Update()
     {
-        //Throw tuþu için ---------------------------------------------------
-        //Elinde item varken
+        useDelay -= Time.deltaTime;
+        HandleThrowing();
+        HandleItemUsage();
+        HandleItemPickup();
+    }
+
+    private void HandleThrowing()
+    {
         if (rightHand.childCount > 0)
         {
-            //Space'e basarsa
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                //Space'e basma zamanýndan itibaren geçen zamaný tut
                 holdStartTime = Time.time;
-                //Fýrlatma animasyonuna baþla
-
+                // Start throwing animation
             }
-            //Space'den çekerse
+
             if (Input.GetKeyUp(KeyCode.Space))
             {
-
-                //Geçen zamanýn max zamana uygun olduðunu checkle
                 float passedTime = Time.time - holdStartTime;
 
-                //Throwa geçmeden space býrakýldýysa
                 if (passedTime < delayForThrowing)
                 {
-                    //Yere býrak
                     Drop();
-
                 }
-                //Throw süresini aþtýysa
-                if (passedTime > delayForThrowing)
+                else if (passedTime > delayForThrowing)
                 {
-                    //Fýrlat
                     Throw();
                 }
-
             }
-
         }
-        //Use tuþu için ----------------------------------------------------
-        //Elinde obje varsa
+    }
+
+
+
+    private void HandleItemUsage()
+    {
+
+
         if (rightHand.childCount > 0)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-
+                useDelay = 1;
                 rightHand.GetChild(0).GetComponent<Grabbable>().Use();
-
-
             }
         }
-        //Elinde obje yoksa
+    }
+
+    private void HandleItemPickup()
+    {
         if (objectsInRadius.Count > 0 && rightHand.childCount == 0)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                useDelay = 1;
                 PickUp(FindNearestItem());
             }
         }
-
-
-
     }
 
 
-    [SerializeField] private List<GameObject> objectsInRadius = new List<GameObject>();
+    #region Trigger Kýsmý
+
+    [SerializeField] public List<GameObject> objectsInRadius = new List<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -99,7 +100,6 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
     private GameObject FindNearestItem()
     {
 
@@ -108,6 +108,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (GameObject go in objectsInRadius)
         {
+            
             float distance = Vector3.Distance(transform.position, go.transform.position);
 
             if (distance < nearestDistance)
@@ -132,20 +133,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
+#endregion
     private void PickUp(GameObject pickedObject)
     {
+        //PlayerControlleri objeye geçirir
+        pickedObject.GetComponent<Grabbable>().playerController = this;
+
         //Pick up animation trigger
         playerAnim.SetTrigger("onPickup");
+
         //Elin childi yapar
         pickedObject.transform.SetParent(rightHand);
         pickedObject.transform.localPosition = Vector3.zero;
+
         //Rigid body ve colllider
         EnableDisablePhysics(pickedObject, true);
     }
 
-    private void Drop()
+    public void Drop()
     {
+        //PlayerControlleri objeden alýr
+        rightHand.GetChild(0).GetComponent<Grabbable>().playerController = null;
+
         //Elin childini birakir
         var child = rightHand.GetChild(0);
         child.transform.SetParent(null);
@@ -156,6 +165,7 @@ public class PlayerController : MonoBehaviour
 
     private void EnableDisablePhysics(GameObject pickedObject, bool toggle)
     {
+        
         pickedObject.GetComponent<Rigidbody>().isKinematic = toggle;
         pickedObject.GetComponent<MeshCollider>().enabled = !toggle;
     }

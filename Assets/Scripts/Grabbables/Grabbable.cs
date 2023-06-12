@@ -7,7 +7,6 @@ public class Grabbable : MonoBehaviour
 
     public int maxDurability;
     public int currentDurability;
-    public bool isBroken = false;
     //Bunu buraya yazmadan yapmanýn yolunu bulabilir miyim acaba
     public PlayerController playerController;
 
@@ -21,13 +20,14 @@ public class Grabbable : MonoBehaviour
        
     }
 
-    public void CheckIfBroken()
+    public bool CheckIfBroken()
     {
         if (currentDurability <= 0)
         {
+            return true;
 
-            isBroken = true;
         }
+        return false;
     }
 
 }

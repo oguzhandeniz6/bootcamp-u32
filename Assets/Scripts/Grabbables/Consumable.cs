@@ -12,10 +12,9 @@ public class Consumable : Grabbable
 
     public override void Use()
     {
-        if (base.isBroken)
-        {
-            return;
-        }
+        
+
+        //Consumable türüne göre anim oynat ve sonradan can/enerji ver
         switch (type)
         {
             case ConsumableType.Health:
@@ -43,8 +42,18 @@ public class Consumable : Grabbable
             default:
                 break;
         }
+
         //Durability azalt
         base.currentDurability -= 1;
+
+        //Kýrýk mý deðil mi kontrol et
+        //kýrýksa yok et
+        if (CheckIfBroken())
+        {
+            playerController.objectsInRadius.Remove(this.gameObject);
+            playerController.Drop();
+            Destroy(this.gameObject);
+        }
     
         Debug.Log("restored " + amount + " health.");
         Debug.Log(base.currentDurability + "/" + base.maxDurability);
