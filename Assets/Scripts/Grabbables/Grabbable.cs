@@ -8,6 +8,8 @@ public class Grabbable : MonoBehaviour
     public int maxDurability;
     public int currentDurability;
     public bool isBroken = false;
+    //Bunu buraya yazmadan yapmanýn yolunu bulabilir miyim acaba
+    public PlayerController playerController;
 
     private void Start()
     {
@@ -16,16 +18,10 @@ public class Grabbable : MonoBehaviour
 
     public virtual void Use()
     {
-        if (isBroken == true)
-        {
-            Debug.Log(this.gameObject + " is broken.");
-            return;
-        }
-        currentDurability -= 1;
-        CheckIfBroken();
+       
     }
 
-    private void CheckIfBroken()
+    public void CheckIfBroken()
     {
         if (currentDurability <= 0)
         {
