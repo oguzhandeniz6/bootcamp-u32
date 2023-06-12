@@ -135,34 +135,36 @@ public class PlayerController : MonoBehaviour
 
     private void PickUp(GameObject pickedObject)
     {
+        //Pick up animation trigger
         playerAnim.SetTrigger("onPickup");
+        //Elin childi yapar
         pickedObject.transform.SetParent(rightHand);
         pickedObject.transform.localPosition = Vector3.zero;
-        pickedObject.GetComponent<Rigidbody>().isKinematic = true;
-        pickedObject.GetComponent<MeshCollider>().enabled = false;
-        pickedObject.GetComponent<Grabbable>().playerController = this;
+        //Rigid body ve colllider
+        EnableDisablePhysics(pickedObject, true);
     }
 
     private void Drop()
     {
+        //Elin childini birakir
         var child = rightHand.GetChild(0);
-        child.GetComponent<Grabbable>().playerController = null;
         child.transform.SetParent(null);
-        child.GetComponent<Rigidbody>().isKinematic = false;
-        child.GetComponent<MeshCollider>().enabled = true;
 
+        EnableDisablePhysics(child.gameObject, false);
 
+    }
+
+    private void EnableDisablePhysics(GameObject pickedObject, bool toggle)
+    {
+        pickedObject.GetComponent<Rigidbody>().isKinematic = toggle;
+        pickedObject.GetComponent<MeshCollider>().enabled = !toggle;
     }
 
     //Þimdilik drop ile ayný
     private void Throw()
     {
-       
-        var child = rightHand.GetChild(0);
 
-        child.transform.SetParent(null);
-        child.GetComponent<Rigidbody>().isKinematic = false;
-        child.GetComponent<MeshCollider>().enabled = true;
+        Drop();
 
 
     }
