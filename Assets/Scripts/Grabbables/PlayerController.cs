@@ -23,48 +23,57 @@ public class PlayerController : MonoBehaviour
     {
         useDelay -= Time.deltaTime;
         HandleThrowing();
-        HandleItemUsage();
-        HandleItemPickup();
+
+        
+            HandleItemPickup();
+            HandleItemUsage();
+        
     }
 
     private void HandleThrowing()
     {
-        if (rightHand.childCount > 0)
+        if (useDelay <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (rightHand.childCount > 0)
             {
-                holdStartTime = Time.time;
-                // Start throwing animation
-            }
-
-            if (Input.GetKeyUp(KeyCode.Space))
-            {
-                float passedTime = Time.time - holdStartTime;
-
-                if (passedTime < delayForThrowing)
+                if (Input.GetKeyDown(KeyCode.Space))
                 {
-                    Drop();
+                    holdStartTime = Time.time;
+                    // Start throwing animation
                 }
-                else if (passedTime > delayForThrowing)
+
+                if (Input.GetKeyUp(KeyCode.Space))
                 {
-                    Throw();
+                    float passedTime = Time.time - holdStartTime;
+
+                    if (passedTime < delayForThrowing)
+                    {
+                        Drop();
+                    }
+                    else if (passedTime > delayForThrowing)
+                    {
+                        Throw();
+                    }
                 }
             }
         }
     }
 
+    
 
 
     private void HandleItemUsage()
     {
-
-
-        if (rightHand.childCount > 0)
+        if (useDelay <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+
+            if (rightHand.childCount > 0)
             {
-                useDelay = 1;
-                rightHand.GetChild(0).GetComponent<Grabbable>().Use();
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    useDelay = 1;
+                    rightHand.GetChild(0).GetComponent<Grabbable>().Use();
+                }
             }
         }
     }
