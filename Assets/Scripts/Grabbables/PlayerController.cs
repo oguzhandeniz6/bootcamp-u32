@@ -154,6 +154,7 @@ public class PlayerController : MonoBehaviour
         //Elin childi yapar
         pickedObject.transform.SetParent(rightHand);
         pickedObject.transform.localPosition = Vector3.zero;
+        pickedObject.transform.localRotation = Quaternion.identity;
 
         //Rigid body ve colllider
         EnableDisablePhysics(pickedObject, true);
