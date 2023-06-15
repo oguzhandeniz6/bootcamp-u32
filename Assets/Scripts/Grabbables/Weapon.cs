@@ -25,7 +25,10 @@ public class Weapon : Grabbable
         
     }
 
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.name);
+    }
 
 
 }
