@@ -15,9 +15,19 @@ public class Grabbable : MonoBehaviour
         currentDurability = maxDurability;
     }
 
+    public virtual void OnGrabbed()
+    {
+
+    }
+
     public virtual void Use()
     {
        
+    }
+
+    public virtual void OnDropped()
+    {
+        
     }
 
     public bool CheckIfBroken()

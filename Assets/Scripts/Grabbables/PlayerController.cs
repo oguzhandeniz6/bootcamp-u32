@@ -177,7 +177,15 @@ public class PlayerController : MonoBehaviour
     {
         
         pickedObject.GetComponent<Rigidbody>().isKinematic = toggle;
-        pickedObject.GetComponent<MeshCollider>().enabled = !toggle;
+        
+        if (pickedObject.GetComponent<MeshCollider>() != null)
+        {
+            pickedObject.GetComponent<MeshCollider>().enabled = !toggle;
+        }
+        else
+        {
+            pickedObject.GetComponentInChildren<MeshCollider>().enabled = !toggle;
+        }
     }
 
     //Þimdilik drop ile ayný
@@ -187,6 +195,22 @@ public class PlayerController : MonoBehaviour
         Drop();
 
 
+    }
+
+    public void AttackEnter()
+    {
+        if (rightHand.GetChild(0) != null)
+        {
+            rightHand.GetChild(0).GetComponentInChildren<MeshCollider>().enabled = true;
+        }
+    }
+
+    public void AttackExit()
+    {
+        if (rightHand.GetChild(0) != null)
+        {
+            rightHand.GetChild(0).GetComponentInChildren<MeshCollider>().enabled = false;
+        }
     }
 
 }
