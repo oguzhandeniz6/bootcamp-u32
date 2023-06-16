@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float delayForThrowing = 0.3f;
     private float holdStartTime = 0;
     public Animator playerAnim;
+    private PlayerMovement playerMovement;
 
     private void Start()
     {
         playerAnim = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     float useDelay;
@@ -203,6 +205,8 @@ public class PlayerController : MonoBehaviour
         {
             rightHand.GetChild(0).GetComponentInChildren<MeshCollider>().enabled = true;
         }
+
+        
     }
 
     public void AttackExit()
