@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -38.729, y: 174.871, z: -9.523}
 --- !u!33 &7606932803237793798
 MeshFilter:
@@ -146,6 +146,7 @@ MonoBehaviour:
   maxDurability: 2
   currentDurability: 0
   playerController: {fileID: 0}
+  throwCoefficient: 20
   type: 0
   isDrink: 1
   amount: 50

@@ -10,11 +10,16 @@ public class Consumable : Grabbable
     public bool isDrink;
     public float amount;
 
+    public Consumable()
+    {
+        throwCoefficient = 30f;
+    }
+
     public override void Use()
     {
         
 
-        //Consumable türüne göre anim oynat ve sonradan can/enerji ver
+        //Consumable tï¿½rï¿½ne gï¿½re anim oynat ve sonradan can/enerji ver
         switch (type)
         {
             case ConsumableType.Health:
@@ -46,8 +51,8 @@ public class Consumable : Grabbable
         //Durability azalt
         base.currentDurability -= 1;
 
-        //Kýrýk mý deðil mi kontrol et
-        //kýrýksa yok et
+        //Kï¿½rï¿½k mï¿½ deï¿½il mi kontrol et
+        //kï¿½rï¿½ksa yok et
         if (CheckIfBroken())
         {
             playerController.objectsInRadius.Remove(this.gameObject);

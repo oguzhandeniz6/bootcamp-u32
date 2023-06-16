@@ -124,6 +124,7 @@ MonoBehaviour:
   maxDurability: 2
   currentDurability: 0
   playerController: {fileID: 0}
+  throwCoefficient: 20
   type: 0
   isDrink: 0
   amount: 10

@@ -5098,6 +5098,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 883724332993734798, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      propertyPath: throwForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417288952320745180, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.59669447
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417288952320745180, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      propertyPath: m_Size.z
+      value: 0.43704605
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417288952320745180, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      propertyPath: m_Center.x
+      value: -0.011937857
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417288952320745180, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0622797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1957463912743547295, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+      propertyPath: m_Name
+      value: PickupZone
+      objectReference: {fileID: 0}
     - target: {fileID: 2650853113769785489, guid: a60240d40e49ac444a18b829f902812e, type: 3}
       propertyPath: Camera
       value: 
