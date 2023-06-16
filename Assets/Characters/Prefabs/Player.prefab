@@ -299,7 +299,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8395450180496082050}
   m_Layer: 0
-  m_Name: WeaponZone
+  m_Name: PickupZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,14 +312,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957463912743547295}
-  m_LocalRotation: {x: 0.79143715, y: 0.59958524, z: -0.08136402, w: 0.0866297}
-  m_LocalPosition: {x: -0.014791474, y: 0.17455412, z: 0.05684996}
+  m_LocalRotation: {x: -0.035953276, y: -0.12140957, z: 0.5692421, w: 0.8123611}
+  m_LocalPosition: {x: 0.033, y: 0.14, z: 0.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 955045026604184645}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 175.422, y: -193.825, z: -110.515}
 --- !u!1 &2073349958278461566
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,11 +1292,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6940259097323679493}
   - component: {fileID: 935154467708122360}
-  - component: {fileID: 1417288952320745180}
   - component: {fileID: 4925936188800140520}
   - component: {fileID: 2650853113769785489}
   - component: {fileID: 6197280704875334642}
   - component: {fileID: 883724332993734798}
+  - component: {fileID: 6153056853089219872}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1319,7 +1319,7 @@ Transform:
   - {fileID: 2631708697934215847}
   - {fileID: 6869769135013784992}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &935154467708122360
 Rigidbody:
@@ -1346,29 +1346,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!65 &1417288952320745180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8295607947077483184}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1.7592173, z: 1}
-  m_Center: {x: 0, y: 0.82926774, z: 0}
 --- !u!95 &4925936188800140520
 Animator:
   serializedVersion: 5
@@ -1438,6 +1417,29 @@ MonoBehaviour:
   delayForThrowing: 0.3
   playerAnim: {fileID: 0}
   objectsInRadius: []
+--- !u!136 &6153056853089219872
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8295607947077483184}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2.0521708
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.98315334, z: 0}
 --- !u!1 &8337678529869185170
 GameObject:
   m_ObjectHideFlags: 0

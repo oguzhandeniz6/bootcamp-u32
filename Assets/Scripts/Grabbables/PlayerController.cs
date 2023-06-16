@@ -12,11 +12,11 @@ public class PlayerController : MonoBehaviour
     private float holdStartTime = 0;
     public Animator playerAnim;
     private Rigidbody _rb;
-
     private void Start()
     {
         playerAnim = GetComponent<Animator>();
         _rb = GetComponent<Rigidbody>();
+
     }
 
     float useDelay;
@@ -224,6 +224,8 @@ public class PlayerController : MonoBehaviour
         {
             rightHand.GetChild(0).GetComponentInChildren<MeshCollider>().enabled = true;
         }
+
+        
     }
 
     public void AttackExit()
