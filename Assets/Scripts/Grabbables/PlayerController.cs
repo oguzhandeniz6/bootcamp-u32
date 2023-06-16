@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         useDelay -= Time.deltaTime;
         HandleThrowing();
 
-        
+
             HandleItemPickup();
             HandleItemUsage();
         
@@ -41,19 +41,22 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     holdStartTime = Time.time;
-                    // Start throwing animation
+                    playerAnim.SetBool("isThrowing", true);
+                    Debug.Log("being pressed");
                 }
 
                 if (Input.GetKeyUp(KeyCode.Space))
                 {
                     float passedTime = Time.time - holdStartTime;
-
+                   
                     if (passedTime < delayForThrowing)
                     {
+                        playerAnim.SetBool("isThrowing", false);
                         Drop();
                     }
                     else if (passedTime > delayForThrowing)
                     {
+                        playerAnim.SetBool("isThrowing", false);
                         if (passedTime > 1f) passedTime = 1f;
                         Throw(passedTime);
                     }
