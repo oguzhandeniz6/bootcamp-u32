@@ -7,6 +7,11 @@ public class Weapon : Grabbable
 
     MeshCollider swordHitbox;
 
+    public Weapon()
+    {
+        throwCoefficient = 10f;
+    }
+
     public override void OnGrabbed()
     {
         playerController.playerAnim.SetBool("hasWeapon", true);
@@ -27,7 +32,7 @@ public class Weapon : Grabbable
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
+        // Debug.Log(collision.gameObject.name);
     }
 
 

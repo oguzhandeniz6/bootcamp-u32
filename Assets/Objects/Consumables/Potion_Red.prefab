@@ -29,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5932592185622597301}
-  m_LocalRotation: {x: 0.09302063, y: -0.93799824, z: -0.32660028, w: -0.069561176}
+  m_LocalRotation: {x: -0.09301876, y: 0.9379993, z: 0.32659736, w: 0.069563165}
   m_LocalPosition: {x: 2, y: 1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -38.729, y: 174.871, z: -9.523}
 --- !u!33 &7606932803237793798
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   maxDurability: 2
   currentDurability: 0
   playerController: {fileID: 0}
+  throwCoefficient: 20
   type: 0
   isDrink: 1
   amount: 50

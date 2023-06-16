@@ -7,8 +7,11 @@ public class Grabbable : MonoBehaviour
 
     public int maxDurability;
     public int currentDurability;
-    //Bunu buraya yazmadan yapman�n yolunu bulabilir miyim acaba
+    //Bunu buraya yazmadan yapman�n yolunu bulabilir miyim acaba
     public PlayerController playerController;
+
+    [Tooltip("Fırlatma katsayısı")]
+    [SerializeField] public float throwCoefficient;
 
     private void Start()
     {

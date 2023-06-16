@@ -7,14 +7,16 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Transform rightHand;
 
-    [Tooltip("Fýrlatma ve yere býrakmayý ayýran delay süresi")]
+    [Tooltip("Fï¿½rlatma ve yere bï¿½rakmayï¿½ ayï¿½ran delay sï¿½resi")]
     [SerializeField] private float delayForThrowing = 0.3f;
     private float holdStartTime = 0;
     public Animator playerAnim;
+    private Rigidbody _rb;
 
     private void Start()
     {
         playerAnim = GetComponent<Animator>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     float useDelay;
@@ -52,7 +54,8 @@ public class PlayerController : MonoBehaviour
                     }
                     else if (passedTime > delayForThrowing)
                     {
-                        Throw();
+                        if (passedTime > 1f) passedTime = 1f;
+                        Throw(passedTime);
                     }
                 }
             }
@@ -91,7 +94,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    #region Trigger Kýsmý
+    #region Trigger Kï¿½smï¿½
 
     [SerializeField] public List<GameObject> objectsInRadius = new List<GameObject>();
 
@@ -145,7 +148,7 @@ public class PlayerController : MonoBehaviour
 #endregion
     private void PickUp(GameObject pickedObject)
     {
-        //PlayerControlleri objeye geçirir
+        //PlayerControlleri objeye geï¿½irir
         pickedObject.GetComponent<Grabbable>().playerController = this;
 
         //Pick up animation trigger
@@ -162,7 +165,7 @@ public class PlayerController : MonoBehaviour
 
     public void Drop()
     {
-        //PlayerControlleri objeden alýr
+        //PlayerControlleri objeden alï¿½r
         rightHand.GetChild(0).GetComponent<Grabbable>().playerController = null;
 
         //Elin childini birakir
@@ -188,11 +191,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //Þimdilik drop ile ayný
-    private void Throw()
+    // Animasyonu geÃ§ yapÄ±yor
+    private void Throw(float throwForce)
     {
+        // Get the object to throw
+        Grabbable objectToThrow = rightHand.GetChild(0).GetComponent<Grabbable>();
+        Rigidbody throwableRb = objectToThrow.GetComponent<Rigidbody>();
 
-        Drop();
+        //PlayerControlleri objeden alï¿½r
+        rightHand.GetChild(0).GetComponent<Grabbable>().playerController = null;
+
+        //Elin childini birakir
+        var child = rightHand.GetChild(0);
+        child.transform.SetParent(null);
+        EnableDisablePhysics(child.gameObject, false);
+
+        
+        // Throw animation trigger (geÃ§ yapÄ±yor)
+        playerAnim.SetTrigger("onThrow");
+
+        // Set force to add (direction and magnitude)
+        Vector3 forceToAdd = _rb.transform.forward * throwForce * objectToThrow.throwCoefficient;
+
+        throwableRb.AddForce(forceToAdd, ForceMode.Impulse);
 
 
     }
