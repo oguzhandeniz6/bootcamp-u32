@@ -194,7 +194,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Animasyonu geç yapıyor
     private void Throw(float throwForce)
     {
         // Get the object to throw
@@ -210,7 +209,7 @@ public class PlayerController : MonoBehaviour
         EnableDisablePhysics(child.gameObject, false);
 
         
-        // Throw animation trigger (geç yapıyor)
+        // Throw animation trigger
         playerAnim.SetTrigger("onThrow");
 
         // Set force to add (direction and magnitude)

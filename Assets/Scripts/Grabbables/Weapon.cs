@@ -32,7 +32,6 @@ public class Weapon : Grabbable
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.TryGetComponent<IDamagable>(out IDamagable hit))
         {
             hit.Damage();
