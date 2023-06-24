@@ -49,7 +49,7 @@ public class Consumable : Grabbable
         }
 
         //Durability azalt
-        base.currentDurability -= 1;
+        LoseDurability(1);
 
         //K�r�k m� de�il mi kontrol et
         //k�r�ksa yok et

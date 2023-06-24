@@ -6,6 +6,7 @@ public class Weapon : Grabbable
 {
 
     MeshCollider swordHitbox;
+    
 
     public Weapon()
     {
@@ -35,6 +36,7 @@ public class Weapon : Grabbable
         if (collision.gameObject.TryGetComponent<IDamagable>(out IDamagable hit))
         {
             hit.Damage();
+            LoseDurability(1);
         }
 
     }

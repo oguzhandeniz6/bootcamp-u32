@@ -1,62 +1,95 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public class UIItemDurability : MonoBehaviour
 {
-    private List<GameObject> durabilityPoints = new List<GameObject>();
     [SerializeField] GameObject durabilityPointPrefab;
-    int maxDurabilityReceived;
-    int currentDurabilityReceived;
+    private List<Image> durabilityPoints = new List<Image>();
+    private List<bool> durabilityStates = new List<bool>();
 
-    public void GetCurrentAndMaxDurability(Component sender, object data)
+    public void GetItemData(Component sender, object data)
     {
         if (data is Grabbable)
         {
-            Grabbable grabbedItem = (Grabbable)data;
-            maxDurabilityReceived = grabbedItem.maxDurability;
-            currentDurabilityReceived = grabbedItem.currentDurability;
-
+            Grabbable grabbedObj = (Grabbable)data;
+            SetDurability(grabbedObj.maxDurability, grabbedObj.currentDurability);
         }
-
-        ClearDurabilityPoints();
-
-        SpawnDurabilityPoints();
-
-        //AdjustCurrentDurability();
     }
 
-    private void SpawnDurabilityPoints()
+    private void SetDurability(int maxDurability, int currentDurability)
     {
-        for (int i = 0; i < maxDurabilityReceived; i++)
+        ClearDurabilityPoints(null, null);
+        CreateDurabilityPoints(maxDurability);
+        UpdateDurabilityUI(currentDurability);
+    }
+
+    public void ClearDurabilityPoints(Component sender, object data)
+    {
+
+
+        foreach (Image durabilityPoint in durabilityPoints)
         {
-            GameObject spawnedPoint = Instantiate(durabilityPointPrefab, transform);
-            durabilityPoints.Add(spawnedPoint);
+            Destroy(durabilityPoint.gameObject);
+        }
+        durabilityPoints.Clear();
+        durabilityStates.Clear();
+    }
+
+    private void CreateDurabilityPoints(int maxDurability)
+    {
+        for (int i = 0; i < maxDurability; i++)
+        {
+            GameObject durabilityPointObj = Instantiate(durabilityPointPrefab, transform);
+            Image durabilityPoint = durabilityPointObj.GetComponent<Image>();
+            durabilityPoints.Add(durabilityPoint);
+            durabilityStates.Add(true); // All points initially set to true (green)
         }
     }
-    private void ClearDurabilityPoints()
+
+    private void UpdateDurabilityUI(int currentDurability)
     {
         for (int i = 0; i < durabilityPoints.Count; i++)
         {
-            Destroy(durabilityPoints[i].gameObject);
+            Image durabilityPoint = durabilityPoints[i];
+
+            if (i >= currentDurability)
+            {
+                durabilityStates[i] = false; // Mark the box as used (red)
+                durabilityPoint.color = Color.red;
+            }
+            else
+            {
+                durabilityStates[i] = true; // Mark the box as available (green)
+                durabilityPoint.color = Color.green;
+            }
         }
     }
 
-    public void ItemDropped(Component sender, object data)
+    public void DecreaseDurability(Component sender, object data)
     {
-        ClearDurabilityPoints();
-    }
+        //datadan kaç can kaybedildigini cekebiliriz sonrasi icin
+        //alta bir for loop koyarak o halledilir
 
-    private void AdjustCurrentDurability()
-    {
-        int currentDurability = currentDurabilityReceived;
+        int lastGreenIndex = FindLastGreenDurabilityIndex();
 
-        for (int i = 0; i < currentDurability; i++)
+        if (lastGreenIndex >= 0)
         {
-            durabilityPoints[i].transform.GetChild(0).GetComponent<Image>().color = Color.green;
+            durabilityStates[lastGreenIndex] = false; // Mark the box as used (red)
+            durabilityPoints[lastGreenIndex].color = Color.red;
         }
     }
 
+    private int FindLastGreenDurabilityIndex()
+    {
+        for (int i = durabilityStates.Count - 1; i >= 0; i--)
+        {
+            if (durabilityStates[i])
+            {
+                return i;
+            }
+        }
+
+        return -1; // No green durability box found
+    }
 }

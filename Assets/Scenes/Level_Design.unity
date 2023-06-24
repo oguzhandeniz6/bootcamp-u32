@@ -4716,6 +4716,8 @@ GameObject:
   - component: {fileID: 683379071}
   - component: {fileID: 683379073}
   - component: {fileID: 683379074}
+  - component: {fileID: 683379075}
+  - component: {fileID: 683379076}
   m_Layer: 5
   m_Name: TopRightListener
   m_TagString: Untagged
@@ -4771,7 +4773,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 288503202}
         m_TargetAssemblyTypeName: UIItemDurability, Assembly-CSharp
-        m_MethodName: GetCurrentAndMaxDurability
+        m_MethodName: GetItemData
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4784,6 +4786,74 @@ MonoBehaviour:
       - m_Target: {fileID: 673566524}
         m_TargetAssemblyTypeName: UIItemImageName, Assembly-CSharp
         m_MethodName: ChangeItemImageText
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &683379075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683379070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76392eaa56f6ae468c54f6ad80921d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 288503202}
+        m_TargetAssemblyTypeName: UIItemDurability, Assembly-CSharp
+        m_MethodName: ClearDurabilityPoints
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 673566524}
+        m_TargetAssemblyTypeName: UIItemImageName, Assembly-CSharp
+        m_MethodName: ItemDropped
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &683379076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683379070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76392eaa56f6ae468c54f6ad80921d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 5e52cd0e2c30718409a6199606496a70, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 288503202}
+        m_TargetAssemblyTypeName: UIItemDurability, Assembly-CSharp
+        m_MethodName: DecreaseDurability
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7145,10 +7215,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5405769665767908958, guid: 5e1dee9428ecfa74f9c31d75c08914e0, type: 3}
-      propertyPath: onItemDropped
-      value: 
-      objectReference: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
     - target: {fileID: 5953984203932300205, guid: 5e1dee9428ecfa74f9c31d75c08914e0, type: 3}
       propertyPath: m_Name
       value: SwordPivot (1)

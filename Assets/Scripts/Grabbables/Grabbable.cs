@@ -16,6 +16,7 @@ public class Grabbable : MonoBehaviour
     [Header("Events")]
     public GameEvent onItemGrabbed;
     public GameEvent onItemDropped;
+    public GameEvent onDurabilityLost;
 
     [Tooltip("Fırlatma katsayısı")]
     [SerializeField] public float throwCoefficient;
@@ -40,6 +41,12 @@ public class Grabbable : MonoBehaviour
     public virtual void OnDropped()
     {
         onItemDropped.Raise(null, null);
+    }
+
+    public void LoseDurability(int amount)
+    {
+        currentDurability -= amount;
+        onDurabilityLost.Raise(null, amount);
     }
 
     public bool CheckIfBroken()
