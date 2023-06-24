@@ -140,7 +140,7 @@ Transform:
   m_Children:
   - {fileID: 6025708091588058325}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5405769665767908958
 MonoBehaviour:
@@ -154,9 +154,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c927c08c6ab4f624b90492042901e8a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDurability: 10
+  icon: {fileID: 21300000, guid: 7d1e464438b84e649953975fb06cef6d, type: 3}
+  itemName: Sword
+  maxDurability: 5
   currentDurability: 0
   playerController: {fileID: 0}
+  onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
+  onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
+  throwCoefficient: 10
 --- !u!135 &8181451338394188952
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 6067063268097696361}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &3596954996507963697
 SphereCollider:
@@ -68,9 +68,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803f7fb2517b24b4cab42654776454a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  itemName: 
   maxDurability: 0
   currentDurability: 0
   playerController: {fileID: 0}
+  onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
+  onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
   throwCoefficient: 20
 --- !u!54 &2073048966312944808
 Rigidbody:

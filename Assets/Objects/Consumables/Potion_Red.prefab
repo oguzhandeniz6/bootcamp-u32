@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -38.729, y: 174.871, z: -9.523}
 --- !u!33 &7606932803237793798
 MeshFilter:
@@ -143,9 +143,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b7da33a7ef6de4c94acb01f9ebbab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 86ef720847570604faecfd3cdc381b98, type: 3}
+  itemName: Potion
   maxDurability: 2
   currentDurability: 0
   playerController: {fileID: 0}
+  onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
+  onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
   throwCoefficient: 20
   type: 0
   isDrink: 1

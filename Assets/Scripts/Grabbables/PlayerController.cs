@@ -151,8 +151,14 @@ public class PlayerController : MonoBehaviour
 #endregion
     private void PickUp(GameObject pickedObject)
     {
+
+
         //PlayerControlleri objeye ge�irir
         pickedObject.GetComponent<Grabbable>().playerController = this;
+
+        //OnGrabbed'i cagirir
+        pickedObject.GetComponent<Grabbable>().OnGrabbed();
+
 
         //Pick up animation trigger
         playerAnim.SetTrigger("onPickup");
@@ -168,8 +174,13 @@ public class PlayerController : MonoBehaviour
 
     public void Drop()
     {
+        //OnDropped'i cagirir
+        rightHand.GetChild(0).GetComponent<Grabbable>().OnDropped();
+
         //PlayerControlleri objeden al�r
         rightHand.GetChild(0).GetComponent<Grabbable>().playerController = null;
+
+
 
         //Elin childini birakir
         var child = rightHand.GetChild(0);
