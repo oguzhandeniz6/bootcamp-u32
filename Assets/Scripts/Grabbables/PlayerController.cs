@@ -211,6 +211,9 @@ public class PlayerController : MonoBehaviour
         Grabbable objectToThrow = rightHand.GetChild(0).GetComponent<Grabbable>();
         Rigidbody throwableRb = objectToThrow.GetComponent<Rigidbody>();
 
+        //OnDropped'i çağırır
+        rightHand.GetChild(0).GetComponent<Grabbable>().OnDropped();
+
         //PlayerControlleri objeden al�r
         rightHand.GetChild(0).GetComponent<Grabbable>().playerController = null;
 

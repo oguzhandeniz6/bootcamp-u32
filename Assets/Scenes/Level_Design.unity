@@ -1076,6 +1076,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4921fcd859a7b0c45848c5f54d6077ad, type: 3}
+--- !u!1 &154952766 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1297387857852912153, guid: cc07fdc5bc98ab846850c9af7b8811ba, type: 3}
+  m_PrefabInstance: {fileID: 8916844574830663656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &154952771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154952766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3727fe5d28c5b841a4c77f36581bc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 24b392678ab353a4a86018b0be0db541, type: 3}
+  itemName: Torch
+  maxDurability: 3
+  currentDurability: 0
+  playerController: {fileID: 0}
+  onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
+  onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
+  onDurabilityLost: {fileID: 11400000, guid: 5e52cd0e2c30718409a6199606496a70, type: 2}
+  throwCoefficient: 10
 --- !u!1001 &155468574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14040,8 +14066,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4749992505875516600, guid: cc07fdc5bc98ab846850c9af7b8811ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1297387857852912153, guid: cc07fdc5bc98ab846850c9af7b8811ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 154952771}
   m_SourcePrefab: {fileID: 100100000, guid: cc07fdc5bc98ab846850c9af7b8811ba, type: 3}

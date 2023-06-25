@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6575757704749045470}
   - component: {fileID: 3596954996507963697}
-  - component: {fileID: 4749992505875516600}
   - component: {fileID: 2073048966312944808}
+  - component: {fileID: 4712442317024584548}
   m_Layer: 0
   m_Name: TorchPivot
   m_TagString: Untagged
@@ -56,27 +56,6 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.75
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4749992505875516600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297387857852912153}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 803f7fb2517b24b4cab42654776454a3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  itemName: 
-  maxDurability: 0
-  currentDurability: 0
-  playerController: {fileID: 0}
-  onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
-  onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
-  onDurabilityLost: {fileID: 11400000, guid: 5e52cd0e2c30718409a6199606496a70, type: 2}
-  throwCoefficient: 20
 --- !u!54 &2073048966312944808
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -104,6 +83,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4712442317024584548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297387857852912153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3727fe5d28c5b841a4c77f36581bc3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 24b392678ab353a4a86018b0be0db541, type: 3}
+  itemName: Torch
+  maxDurability: 3
+  currentDurability: 0
+  playerController: {fileID: 0}
+  onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
+  onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
+  onDurabilityLost: {fileID: 11400000, guid: 5e52cd0e2c30718409a6199606496a70, type: 2}
+  throwCoefficient: 10
 --- !u!1001 &7263257781036073850
 PrefabInstance:
   m_ObjectHideFlags: 0

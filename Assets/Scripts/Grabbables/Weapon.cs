@@ -5,7 +5,6 @@ using UnityEngine;
 public class Weapon : Grabbable
 {
 
-    MeshCollider swordHitbox;
     
 
     public Weapon()
