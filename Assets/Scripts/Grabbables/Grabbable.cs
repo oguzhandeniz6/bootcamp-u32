@@ -47,6 +47,12 @@ public class Grabbable : MonoBehaviour
     {
         currentDurability -= amount;
         onDurabilityLost.Raise(null, amount);
+        if (CheckIfBroken())
+        {
+            playerController.objectsInRadius.Remove(this.gameObject);
+            playerController.Drop();
+            Destroy(this.gameObject);
+        }
     }
 
     public bool CheckIfBroken()

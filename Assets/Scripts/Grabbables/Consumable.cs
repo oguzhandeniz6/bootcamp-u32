@@ -51,15 +51,7 @@ public class Consumable : Grabbable
         //Durability azalt
         LoseDurability(1);
 
-        //K�r�k m� de�il mi kontrol et
-        //k�r�ksa yok et
-        if (CheckIfBroken())
-        {
-            playerController.objectsInRadius.Remove(this.gameObject);
-            playerController.Drop();
-            Destroy(this.gameObject);
-        }
-    
+      
         Debug.Log("restored " + amount + " health.");
         Debug.Log(base.currentDurability + "/" + base.maxDurability);
     }

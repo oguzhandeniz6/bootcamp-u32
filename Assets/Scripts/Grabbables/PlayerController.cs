@@ -243,7 +243,7 @@ public class PlayerController : MonoBehaviour
 
     public void AttackExit()
     {
-        if (rightHand.GetChild(0) != null)
+        if (rightHand.childCount > 0)
         {
             rightHand.GetChild(0).GetComponentInChildren<MeshCollider>().enabled = false;
         }
