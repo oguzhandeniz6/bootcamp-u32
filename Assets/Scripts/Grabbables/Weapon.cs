@@ -14,14 +14,12 @@ public class Weapon : Grabbable
 
     public override void OnGrabbed()
     {
-        playerController.playerAnim.SetBool("hasWeapon", true);
         base.OnGrabbed();
     }
 
     public override void OnDropped()
     {
         base.OnDropped();
-        playerController.playerAnim.SetBool("hasWeapon", false);
     }
 
     public override void Use()
