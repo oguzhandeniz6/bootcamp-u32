@@ -7,11 +7,15 @@ public class Container : MonoBehaviour, IDamagable
 {
     [SerializeField] GameObject healthBar;
     public int Health { get; set; }
+    public IDamagable.DamagableType Type { get; set; }
+    public IDamagable.DamagableType type;
     public int health;
+
 
     private void Start()
     {
         Health = health;
+        Type = type;
         InitializeHealthBar();
         
     }

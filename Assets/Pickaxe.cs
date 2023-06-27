@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Axe : Grabbable
+public class Pickaxe : Grabbable
 {
-
-
-
-    public Axe()
+    public Pickaxe()
     {
         throwCoefficient = 10f;
     }
@@ -32,11 +29,13 @@ public class Axe : Grabbable
     {
         if (collision.gameObject.TryGetComponent<IDamagable>(out IDamagable hit))
         {
+            if (hit.Type != IDamagable.DamagableType.IRON)
+            {
+                return;
+            }
             hit.Damage();
             LoseDurability(1);
         }
 
     }
-
-
 }

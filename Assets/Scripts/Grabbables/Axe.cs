@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weapon : Grabbable
+public class Axe : Grabbable
 {
 
-    
 
-    public Weapon()
+
+    public Axe()
     {
         throwCoefficient = 10f;
     }
@@ -24,18 +24,16 @@ public class Weapon : Grabbable
 
     public override void Use()
     {
-        playerController.playerAnim.SetTrigger("onAttack");
-        
+        playerController.playerAnim.SetTrigger("onChop");
+
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.TryGetComponent<IDamagable>(out IDamagable hit))
         {
-            if (hit.Type != IDamagable.DamagableType.ENEMY)
-            {
-                return;
-            }
+            if (hit.Type != IDamagable.DamagableType.WOOD)
+            { return; }
             hit.Damage();
             LoseDurability(1);
         }
