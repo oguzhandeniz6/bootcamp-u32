@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 6019274307746984688}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4892835891908090963
 Rigidbody:
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 0}
   itemName: 
-  maxDurability: 0
+  maxDurability: 5
   currentDurability: 0
   playerController: {fileID: 0}
   onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}

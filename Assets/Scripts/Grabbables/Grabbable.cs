@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(SphereCollider))]
 public class Grabbable : MonoBehaviour
 {
     public Sprite icon;
@@ -23,6 +25,21 @@ public class Grabbable : MonoBehaviour
 
     private void Start()
     {
+        SphereCollider sphereCollider = GetComponent<SphereCollider>();
+        if(sphereCollider == null)
+        {
+            sphereCollider = GetComponentInChildren<SphereCollider>();
+        }
+        try
+        {
+            sphereCollider.isTrigger = true;
+            sphereCollider.radius = 0.75f;
+        }
+        catch (System.Exception)
+        {
+            Debug.Log("No sphere collider detected");
+            throw;
+        }
         currentDurability = maxDurability;
     }
 

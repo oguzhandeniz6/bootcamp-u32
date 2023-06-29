@@ -3,7 +3,12 @@ guid: 803f7fb2517b24b4cab42654776454a3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - icon: {instanceID: 0}
+  - playerController: {instanceID: 0}
+  - onItemGrabbed: {fileID: 11400000, guid: 8c1cfbf40c234e84eb006f75917f1c8d, type: 2}
+  - onItemDropped: {fileID: 11400000, guid: 8b081ae3fe03caa41a8e1fec979abc3b, type: 2}
+  - onDurabilityLost: {fileID: 11400000, guid: 5e52cd0e2c30718409a6199606496a70, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
