@@ -85,6 +85,31 @@ Sprint Review katılımcıları: Arda Alpat, Esra Mermer, Oğuzhan Deniz, Esra Y
 Takım üyelerinin gelecek sprintlerde daha katılımcı olması gerektiğine dikkat çekildi.
 
 
+# Sprint 2
+Sprint içinde tamamlanması tahmin edilen puan: 140 Puan
 
+Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. İkinci sprintte 140 puana ulaşması gerektiğine karar verildi.
+
+Daily Scrum: Daily Scrum toplantılarının Discord üzerinden yapılmasına karar verildi. Daily Scrum toplantısı örneği word dosyası olarak Readme'de bulunmaktadır.[Günlük yapılanların takibi.docx](https://github.com/oguzhandeniz6/bootcamp-u32/files/11931674/Gunluk.yapilanlarin.takibi.docx)
+
+Sprint board update: Sprint board screenshot'ı:
+![kanban](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/6531dbae-761e-4317-8d9a-f2e2861dbe58)
+
+-Oyun Durumu
+![foto](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/ac32e09d-3664-47d3-8eda-62fcb557002b)
+
+![Ekran görüntüsü 2023-07-03 022224](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/bb8a4c87-d47e-45f1-ad30-4f5718f37a6c)
+
+
+## Sprint Review: 
+Alınan kararlar: Işık sistemi üzerine çalışıldı, enemy ai yapıldı, can arayüzü oluşturuldu, yeni silahlar eklendi, yeni seviyeler oluşturuldu, oyun sesleri sağlandı.
+
+Sprint Review katılımcıları: Arda Alpat, Esra Mermer, Oğuzhan Deniz, Esra Yıldırım, Süleyman Batuhan Şencan
+
+## Sprint Retrospective:
+
+Üçüncü sprintte takım çalışmasının ve iletişimin arttırılmasına karar verildi.
+
+Alınan işlerin iki günlük zaman dilimi içinde bitirilmesi üzerine anlaşıldı. 
 
 ---
