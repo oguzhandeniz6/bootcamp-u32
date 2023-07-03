@@ -96,9 +96,13 @@ Sprint board update: Sprint board screenshot'ı:
 ![kanban](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/6531dbae-761e-4317-8d9a-f2e2861dbe58)
 
 -Oyun Durumu
-![foto](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/ac32e09d-3664-47d3-8eda-62fcb557002b)
+![WhatsApp Image 2023-07-03 at 02 42 54](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/1cb0a0dd-f127-41e3-b6c1-172cc7b9b143)
+![WhatsApp Image 2023-07-03 at 02 42 55 (2)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/2a6590c4-3068-4447-b62a-6bde4e0a556c)
+![WhatsApp Image 2023-07-03 at 02 42 55 (1)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/5a1e09da-a115-4119-b3ca-248319944b7b)
+![WhatsApp Image 2023-07-03 at 02 42 55](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/697facc5-8e6a-46ca-aea7-222c6220f5f8)
+![WhatsApp Image 2023-07-03 at 02 42 54 (2)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/d2ce6960-c1df-4e01-810e-6b3aed383561)
 
-![Ekran görüntüsü 2023-07-03 022224](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/bb8a4c87-d47e-45f1-ad30-4f5718f37a6c)
+![WhatsApp Image 2023-07-03 at 02 42 54 (1)](https://github.com/oguzhandeniz6/bootcamp-u32/assets/104733052/0e891a04-4427-4ba4-8c95-4bf29bcb4ea3)
 
 
 ## Sprint Review: 
