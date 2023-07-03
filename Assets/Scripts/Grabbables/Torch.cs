@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Torch : Grabbable
 {
+    [SerializeField] GameObject lightObject;
 
     public override void OnGrabbed()
     {
