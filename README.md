@@ -86,6 +86,8 @@ Takım üyelerinin gelecek sprintlerde daha katılımcı olması gerektiğine di
 
 
 # Sprint 2
+Sprint notları: Sprint boyunca yapılan işlerin takibi discord üzerinden gerçekleştirildi. Yaşanan olumlu ve olumsuz durumlar tartışıldı.
+
 Sprint içinde tamamlanması tahmin edilen puan: 140 Puan
 
 Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 300 puanlık backlog bulunmaktadır. İkinci sprintte 140 puana ulaşması gerektiğine karar verildi.
