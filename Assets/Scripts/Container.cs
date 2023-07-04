@@ -8,14 +8,18 @@ public class Container : MonoBehaviour, IDamagable
     [SerializeField] GameObject healthBar;
     public int Health { get; set; }
     public int health;
+    public GameObject potPrefab;
+ 
+   
+  
+
 
     private void Start()
     {
         Health = health;
         InitializeHealthBar();
-        
+      
     }
-
     public void Damage()
     {
         //Canýný azalt
@@ -29,6 +33,7 @@ public class Container : MonoBehaviour, IDamagable
         if(Health <= 0)
         {
             Destroy(this.gameObject);
+            GameObject pot = Instantiate(potPrefab, this.transform.position, this.transform.rotation);
             return;
         }
 
