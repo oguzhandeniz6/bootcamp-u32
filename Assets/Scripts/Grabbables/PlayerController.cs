@@ -35,14 +35,18 @@ public class PlayerController : MonoBehaviour
 
     private void HandleInteraction()
     {
-        if (interactablesInRadius.Count > 0)
+        if (useDelay <= 0)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+
+            if (interactablesInRadius.Count > 0 && rightHand.childCount <= 0)
             {
-                FindNearestInteractable().GetComponent<IInteractable>().Interact();
-                useDelay = 1;
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    FindNearestInteractable().GetComponent<IInteractable>().Interact();
+                    useDelay = 1;
+                }
+
             }
-            
         }
     }
 
@@ -157,7 +161,7 @@ public class PlayerController : MonoBehaviour
         return nearestItem;
 
     }
-    private GameObject FindNearestInteractable()
+    public GameObject FindNearestInteractable()
     {
 
         GameObject nearestInteractable = null;

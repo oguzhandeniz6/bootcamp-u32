@@ -4,27 +4,17 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour, IInteractable
 {
-    private bool toggle;
-    [SerializeField] private GameObject panel;
+    [TextArea(5,5)]
+    [SerializeField] string dialogue;
+    public GameEvent onDialogue;
 
-    public void Interact()
+    public void Interact(int id)
     {
-        SwitchOnPanel();
+        onDialogue.Raise(this, dialogue);
     }
 
-    public void SwitchOnPanel()
-    {
-        toggle = !toggle;
 
-        panel.SetActive(toggle);
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            panel.SetActive(false);
-        }
-    }
+
 
 }

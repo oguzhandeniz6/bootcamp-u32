@@ -8,7 +8,7 @@ public class WallTorch : MonoBehaviour, IInteractable
 
 
 
-    public void Interact()
+    public void Interact(int id)
     {
 
         light.gameObject.SetActive(true);
