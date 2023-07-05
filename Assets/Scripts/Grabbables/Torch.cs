@@ -44,6 +44,8 @@ public class Torch : Grabbable
             LoseDurability(1);
         }
 
+        
+
     }
 
     #region Trigger
