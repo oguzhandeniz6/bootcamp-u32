@@ -10,6 +10,12 @@ public class CircleSync : MonoBehaviour
     public Material WallMaterial;
     public Camera Camera;
     public LayerMask Mask;
+
+    private void Awake()
+    {
+        Camera = Camera.main;
+    }
+
     void Update()
     {
         var dir = Camera.transform.position - transform.position;

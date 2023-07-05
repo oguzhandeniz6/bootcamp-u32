@@ -20,16 +20,30 @@ public class PlayerController : MonoBehaviour
     }
 
     float useDelay;
+    
 
     private void Update()
     {
         useDelay -= Time.deltaTime;
         HandleThrowing();
 
-
+        HandleInteraction();
             HandleItemPickup();
             HandleItemUsage();
         
+    }
+
+    private void HandleInteraction()
+    {
+        if (interactablesInRadius.Count > 0)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                FindNearestInteractable().GetComponent<IInteractable>().Interact();
+                useDelay = 1;
+            }
+            
+        }
     }
 
     private void HandleThrowing()
@@ -100,6 +114,7 @@ public class PlayerController : MonoBehaviour
     #region Trigger K�sm�
 
     [SerializeField] public List<GameObject> objectsInRadius = new List<GameObject>();
+    [SerializeField] public List<GameObject> interactablesInRadius = new List<GameObject>();
 
     private void OnTriggerEnter(Collider other)
     {
@@ -111,6 +126,11 @@ public class PlayerController : MonoBehaviour
 
 
         }
+        if (other.TryGetComponent<IInteractable>(out IInteractable interactableObject))
+        {
+            interactablesInRadius.Add(other.gameObject);
+        }
+
 
     }
 
@@ -137,6 +157,28 @@ public class PlayerController : MonoBehaviour
         return nearestItem;
 
     }
+    private GameObject FindNearestInteractable()
+    {
+
+        GameObject nearestInteractable = null;
+        float nearestDistance = Mathf.Infinity;
+
+        foreach (GameObject go in interactablesInRadius)
+        {
+
+            float distance = Vector3.Distance(transform.position, go.transform.position);
+
+            if (distance < nearestDistance)
+            {
+                nearestDistance = distance;
+                nearestInteractable = go;
+            }
+
+        }
+
+        return nearestInteractable;
+
+    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -145,6 +187,10 @@ public class PlayerController : MonoBehaviour
         {
 
             objectsInRadius.Remove(other.gameObject);
+        }
+        if (interactablesInRadius.Contains(other.gameObject))
+        {
+            interactablesInRadius.Remove(other.gameObject);
         }
     }
 
