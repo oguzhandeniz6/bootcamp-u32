@@ -47,7 +47,7 @@ public class TileAdjuster : MonoBehaviour
 
     }
 
-    private void TransparentizeTiles(bool toggle)
+    public void TransparentizeTiles(bool toggle)
     {
         foreach(MeshRenderer wallRenderer in wallsToDisappear)
         {
