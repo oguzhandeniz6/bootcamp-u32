@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _sprintSpeed = 5;
     [SerializeField] private float _rotSpeed = 360;
     private bool isSprinting = false;
+    public bool lockMovement = false;
 
     private void Awake()
     {
@@ -22,11 +23,19 @@ public class PlayerMovement : MonoBehaviour
         _anim = GetComponent<Animator>();
     }
 
-    
+    public void LockMovement(bool toggle)
+    {
+        lockMovement = toggle;
+    }
 
 
     private void Update()
     {
+        if (lockMovement)
+        {
+            return;
+        }
+
         GatherInput();
         Look();
         if (Input.GetKey(KeyCode.LeftShift))
