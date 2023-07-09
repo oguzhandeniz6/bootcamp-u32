@@ -5508,6 +5508,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b437f1c2454a2c409b1b7f35e69d661, type: 3}
+--- !u!1 &432083367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8295607947077483184, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+  m_PrefabInstance: {fileID: 1113241851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &432674133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27310,6 +27315,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 936655011711060175, guid: 5e10be2f5a748844dbd0b2b7e6fafd4a, type: 3}
   m_PrefabInstance: {fileID: 780847666}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1991592195 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6464359054839189273, guid: a60240d40e49ac444a18b829f902812e, type: 3}
+  m_PrefabInstance: {fileID: 1113241851}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c8e490f54d4ec40be37e465486ebfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2010423387
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28535,6 +28551,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Meat
   condition: {fileID: 11400000, guid: 1145c7fcefdb5f448acb21c592cedd6e, type: 2}
+  onSuccesful:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1991592195}
+        m_TargetAssemblyTypeName: PopUpDialogue, Assembly-CSharp
+        m_MethodName: PrintDialogueDirectly
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: That should do it.
+          m_BoolArgument: 0
+        m_CallState: 2
+  disappearAfterOutOfView: 1
+  player: {fileID: 432083367}
+  disappearDistance: 15
+  onDisappear:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1991592195}
+        m_TargetAssemblyTypeName: PopUpDialogue, Assembly-CSharp
+        m_MethodName: PrintDialogueDirectly
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Bon appetit...
+          m_BoolArgument: 0
+        m_CallState: 2
+  bone: {fileID: 4735221276784898094, guid: 5c58fb2d7ad52444f85fc37bcad1f0a5, type: 3}
 --- !u!65 &2104779625
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28554,8 +28604,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 7.4534607, y: 1.0318444, z: 5.6127167}
-  m_Center: {x: -1.2257843, y: 0.69718087, z: 1.6068192}
+  m_Size: {x: 7.4534607, y: 1.0318444, z: 5.319523}
+  m_Center: {x: -1.2257843, y: 0.69718087, z: 1.7534161}
 --- !u!1001 &2107878761
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -69,6 +69,32 @@ public class PopUpDialogue : MonoBehaviour
        
 
     }
+
+    public void PrintDialogueDirectly(string text)
+    {
+        Sequence seq = DOTween.Sequence();
+        seq
+            .AppendCallback(() =>
+            {
+                popUpBox.SetActive(true);
+                popUpText.text = text;
+                popUpImage.color = initialColorAlpha;
+                popUpText.color = initialTextColorAlpha;
+            }).AppendInterval
+            (
+            dialogueDisplayDuration / 2
+            )
+            .Append
+            (
+            popUpText.DOFade(0, dialogueDisplayDuration / 2)
+
+            ).Join
+            (
+            popUpImage.DOFade(0, dialogueDisplayDuration / 2)
+            ).OnComplete(() => { popUpBox.SetActive(false); });
+
+
+    }
     private void Update()
     {
         //Kameraya yuzunu cevir

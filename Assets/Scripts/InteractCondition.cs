@@ -7,6 +7,11 @@ public class InteractCondition : ScriptableObject
 {
     public List<Condition> conditions = new List<Condition>();
 
+    private void OnEnable()
+    {
+        ResetAllConditions();
+    }
+
     public bool ConditionsAreMet()
     {
         foreach(Condition condition in conditions)
