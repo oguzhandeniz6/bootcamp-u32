@@ -7839,7 +7839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &371749839
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18591,9 +18591,13 @@ PlayableDirector:
   - key: {fileID: 5721442889895799016, guid: df5d47d26d4654641979786eebdf701e, type: 2}
     value: {fileID: 371749840}
   - key: {fileID: -6723641240262261095, guid: f90e9b61dbcc93243ae19288654c3d2d, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 1113241860}
   - key: {fileID: 5721442889895799016, guid: f90e9b61dbcc93243ae19288654c3d2d, type: 2}
     value: {fileID: 371749840}
+  - key: {fileID: 6819529625771141908, guid: f90e9b61dbcc93243ae19288654c3d2d, type: 2}
+    value: {fileID: 2013307382}
+  - key: {fileID: -4314455735150781108, guid: f90e9b61dbcc93243ae19288654c3d2d, type: 2}
+    value: {fileID: 2013307382}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1061119758
@@ -20380,6 +20384,8 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: fa28f651a06f5e547b7e84c59783c10e, type: 2}
     - {fileID: 11400000, guid: 19b54b488fcb8154eabfd5bbc2db87bf, type: 2}
+    - {fileID: 11400000, guid: 78ad6421186171944b9bbec4ee659301, type: 2}
+    - {fileID: 11400000, guid: 3f9c00ae0e156db4bb8fac8f42549212, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -20407,6 +20413,34 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1113241854}
+          m_TargetAssemblyTypeName: PopUpDialogue, Assembly-CSharp
+          m_MethodName: PrintDialogueDirectly
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: What the hell!
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1113241854}
+          m_TargetAssemblyTypeName: PopUpDialogue, Assembly-CSharp
+          m_MethodName: PrintDialogueDirectly
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: What just happened?
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!1001 &1114785609
@@ -34036,6 +34070,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2013307380}
   - component: {fileID: 2013307381}
+  - component: {fileID: 2013307382}
+  - component: {fileID: 2013307383}
   m_Layer: 5
   m_Name: SFX
   m_TagString: Untagged
@@ -34081,6 +34117,87 @@ MonoBehaviour:
   shakeDuration: 0.5
   shakeStrength: 0.3
   shakeVibrato: 50
+--- !u!114 &2013307382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013307379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: e8033c8aa33acdb49b94c9219efcfac3, type: 2}
+    - {fileID: 11400000, guid: e036b7f7ffa39ef4c8e7d4d12de8f407, type: 2}
+    - {fileID: 11400000, guid: cae5c3321d35c2847acc345164a261fc, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2013307381}
+          m_TargetAssemblyTypeName: ScreenSFX, Assembly-CSharp
+          m_MethodName: DoFlash
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2013307381}
+          m_TargetAssemblyTypeName: ScreenSFX, Assembly-CSharp
+          m_MethodName: DoShake
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2013307381}
+          m_TargetAssemblyTypeName: ScreenSFX, Assembly-CSharp
+          m_MethodName: DoBackgroundColor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!95 &2013307383
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013307379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2018524496
 PrefabInstance:
   m_ObjectHideFlags: 0

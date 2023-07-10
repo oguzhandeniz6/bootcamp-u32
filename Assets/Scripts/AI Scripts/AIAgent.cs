@@ -49,11 +49,28 @@ public class AIAgent : MonoBehaviour, IDamagable
 
         if(Health <= 0)
         {
-            Destroy(this.gameObject);
+            
             return;
         }
 
         // healthBar.GetComponent<ObjectHealthBar>().LoseHealthPoint();
+    }
+
+    [Header("Body Parts")]
+    [SerializeField] Rigidbody headRb;
+    [SerializeField] MeshCollider headCollider;
+    [SerializeField] Rigidbody bodyRb;
+    [SerializeField] MeshCollider bodyCollider;
+    [SerializeField] Rigidbody handsRb;
+    [SerializeField] MeshCollider handsCollider;
+    [SerializeField] Rigidbody legsRb;
+    [SerializeField] MeshCollider legsCollider;
+    [SerializeField] Rigidbody feetRb;
+    [SerializeField] MeshCollider feetCollider;
+
+    private void Die()
+    {
+
     }
 
 }

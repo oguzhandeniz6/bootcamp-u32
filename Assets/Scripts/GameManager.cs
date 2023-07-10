@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public void TransiteScene(string sceneName)
     {
-        SceneManager.LoadSceneAsync(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 
     public List<InteractCondition> interactConditions = new List<InteractCondition>();
