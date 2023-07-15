@@ -517,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5285396298764953652}
   - component: {fileID: 6659608279742928181}
+  - component: {fileID: 8869176047737085736}
   m_Layer: 0
   m_Name: PT_Male_Armor_Skeleton_01_gauntlets
   m_TagString: Untagged
@@ -670,6 +671,33 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.3179196, y: 0.042293567, z: 0.000000029802322}
     m_Extent: {x: 0.11491711, y: 0.127854, z: 0.92277086}
   m_DirtyAABB: 0
+--- !u!54 &8869176047737085736
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822275040734807263}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1926383560510554208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,6 +1350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8743319387190103586}
+  - component: {fileID: 8971914973508358711}
   m_Layer: 0
   m_Name: PT_Hips
   m_TagString: Untagged
@@ -1351,6 +1380,33 @@ Transform:
   m_Father: {fileID: 7246405954779442645}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8971914973508358711
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570020533121536303}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3630485234213296126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,6 +1545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3138607549509838653}
   - component: {fileID: 4412311403307147147}
+  - component: {fileID: 4850897355210553349}
   m_Layer: 0
   m_Name: PT_Male_Armor_Skeleton_01_body
   m_TagString: Untagged
@@ -1642,6 +1699,33 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.21251705, y: 0.03240376, z: -0.000000059604645}
     m_Extent: {x: 0.28560072, y: 0.17691475, z: 0.7293084}
   m_DirtyAABB: 0
+--- !u!54 &4850897355210553349
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524843940510540355}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4572362652577879270
 GameObject:
   m_ObjectHideFlags: 0
@@ -1847,6 +1931,7 @@ GameObject:
   m_Component:
   - component: {fileID: 383696909082558447}
   - component: {fileID: 6561272655557996989}
+  - component: {fileID: 8147612205338976247}
   m_Layer: 0
   m_Name: PT_Male_Armor_Skeleton_01_legs
   m_TagString: Untagged
@@ -2000,6 +2085,33 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.48100382, y: 0.008350823, z: 0.000000014901161}
     m_Extent: {x: 0.47878367, y: 0.126316, z: 0.21161975}
   m_DirtyAABB: 0
+--- !u!54 &8147612205338976247
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5303673666965191436}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5622907503638863962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2111,6 +2223,7 @@ GameObject:
   - component: {fileID: 1563600038810336506}
   - component: {fileID: 7871234821854433341}
   - component: {fileID: 2947888081406128462}
+  - component: {fileID: 5443470685968237637}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -2137,7 +2250,7 @@ Transform:
   - {fileID: 1377522654262434659}
   - {fileID: 383696909082558447}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &3433645207027195672
 MeshRenderer:
@@ -2280,6 +2393,16 @@ MonoBehaviour:
   sensor: {fileID: 2947888081406128462}
   type: 0
   health: 5
+  headRb: {fileID: 0}
+  headCollider: {fileID: 0}
+  bodyRb: {fileID: 0}
+  bodyCollider: {fileID: 0}
+  handsRb: {fileID: 0}
+  handsCollider: {fileID: 0}
+  legsRb: {fileID: 0}
+  legsCollider: {fileID: 0}
+  feetRb: {fileID: 0}
+  feetCollider: {fileID: 0}
 --- !u!114 &2947888081406128462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2304,6 +2427,27 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 9
   Objects: []
+--- !u!114 &5443470685968237637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6083063157873273001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 750b816df50f4ab4d82c9b21eaae204e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyParts:
+  - {fileID: 3570020533121536303}
+  - {fileID: 4524843940510540355}
+  - {fileID: 9139249875582910018}
+  - {fileID: 1822275040734807263}
+  - {fileID: 8488255521608854719}
+  - {fileID: 5303673666965191436}
+  breakForce: 10
+  breakTorque: 10
 --- !u!1 &6337589018719137260
 GameObject:
   m_ObjectHideFlags: 0
@@ -3113,6 +3257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377522654262434659}
   - component: {fileID: 7113192226233754019}
+  - component: {fileID: 205216641178753807}
   m_Layer: 0
   m_Name: PT_Male_Armor_Skeleton_01_head
   m_TagString: Untagged
@@ -3266,6 +3411,33 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.5962631, y: 0.021298524, z: 0}
     m_Extent: {x: 0.15943508, y: 0.12178436, z: 0.08330283}
   m_DirtyAABB: 0
+--- !u!54 &205216641178753807
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488255521608854719}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8494628595585296833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3591,6 +3763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3393229650283157629}
   - component: {fileID: 8080172372683647596}
+  - component: {fileID: 7671590546170870119}
   m_Layer: 0
   m_Name: PT_Male_Armor_Skeleton_01_boots
   m_TagString: Untagged
@@ -3744,6 +3917,33 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.98472416, y: -0.040180285, z: 0.000000007450581}
     m_Extent: {x: 0.058703065, y: 0.13704233, z: 0.16203374}
   m_DirtyAABB: 0
+--- !u!54 &7671590546170870119
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9139249875582910018}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &9212896805518330289
 GameObject:
   m_ObjectHideFlags: 0
